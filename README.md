@@ -1,6 +1,13 @@
 # ProceduralContentGenerationBasics
 Demo project for Procedural Generation Basics
 
-Learn the basics of procedural generation in Unity.
+Learn the basics of procedural generation for Unity in C#.
+
+Topics include:
+
+- Picking a random item from an array
+- Randomizing 3D object position
+- Randomizing 3D object rotation
+- Spawning objects on the ground / surfaces with raycasts
 
 This project is intended as a reference to accompany the video series published here: https://www.youtube.com/playlist?list=PLuldlT8dkudoNONqbt8GDmMkoFbXfsv9m
