@@ -18,14 +18,11 @@ public class ItemAreaSpawner : MonoBehaviour
         {
             SpreadItem();
         }
-
-       
     }
 
     void SpreadItem()
     {
         Vector3 randPosition = new Vector3(Random.Range(-itemXSpread, itemXSpread), Random.Range(-itemYSpread, itemYSpread), Random.Range(-itemZSpread, itemZSpread)) + transform.position;
-        GameObject clone = Instantiate(itemToSpread, randPosition, Quaternion.identity);
+        GameObject clone = Instantiate(itemToSpread, randPosition, itemToSpread.transform.rotation);
     }
-    
 }

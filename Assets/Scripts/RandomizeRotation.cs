@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class RandomizeRotation : MonoBehaviour
 {
+    public Vector3 randomRotationRange;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        RandomizeYRotation();
+        RandomizeByAxis(randomRotationRange);
     }
 
     void RandomizeMyRotation()
@@ -15,15 +18,13 @@ public class RandomizeRotation : MonoBehaviour
         transform.rotation = Random.rotation;
     }
 
-    void RandomizeYRotation()
+    public void RandomizeByAxis(Vector3 randomRotationConstraints)
     {
-        Quaternion randYRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-        transform.rotation = randYRotation;
-    }
+        Quaternion randomConstrainedRotation = Quaternion.Euler(transform.rotation.eulerAngles.x + Random.Range(-randomRotationConstraints.x, randomRotationConstraints.x),
+            transform.rotation.eulerAngles.y + Random.Range(-randomRotationConstraints.y, randomRotationConstraints.y),
+            transform.rotation.eulerAngles.z + Random.Range(-randomRotationConstraints.z, randomRotationConstraints.z));
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        transform.rotation = randomConstrainedRotation;
     }
+    
 }
