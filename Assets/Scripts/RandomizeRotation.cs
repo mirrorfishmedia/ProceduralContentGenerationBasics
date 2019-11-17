@@ -5,8 +5,7 @@ using UnityEngine;
 public class RandomizeRotation : MonoBehaviour
 {
     public Vector3 randomRotationRange;
-
-
+    
     // Start is called before the first frame update
     void Start()
     {

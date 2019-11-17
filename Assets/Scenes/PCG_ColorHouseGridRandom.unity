@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.6556604, g: 0.84970665, b: 1, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -217,7 +217,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.759434, g: 1, b: 0.8233411, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -256,8 +256,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.14763549, y: 0.38243377, z: -0.06203576, w: 0.9099999}
-  m_LocalPosition: {x: -1.5, y: 6.059408, z: -1.2985954}
+  m_LocalRotation: {x: 0.022410292, y: -0.6288055, z: 0.018139912, w: 0.77702785}
+  m_LocalPosition: {x: 144.90749, y: 7.5045986, z: 88.78772}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -276,15 +276,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.51
+      value: 130.97
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 4.23
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 81.16
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -292,15 +292,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8478632
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.530215
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_RootOrder
@@ -312,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 244.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -406,7 +406,7 @@ Transform:
   m_GameObject: {fileID: 1155333711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalScale: {x: 500, y: 1, z: 1000}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -421,6 +421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1632825380}
   - component: {fileID: 1632825381}
+  - component: {fileID: 1632825379}
   m_Layer: 0
   m_Name: GridSpawner
   m_TagString: Untagged
@@ -428,6 +429,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1632825379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632825378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e63541bcf4a0884c93fcdf115464410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1632825380
 Transform:
   m_ObjectHideFlags: 0
@@ -455,9 +468,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToPickFrom:
-  - {fileID: 1213017298524885382, guid: 56d09830b03616441be0ecb22fdc5650, type: 3}
-  gridX: 30
-  gridZ: 30
-  gridSpacingOffset: 1.2
-  gridOrigin: {x: 0, y: 0.5, z: 0}
-  positionRandomization: {x: 0.15, y: 0.2, z: 0.15}
+  - {fileID: 4572766818279443001, guid: 7f5639ca340de3148ab72b8958c9be51, type: 3}
+  gridX: 8
+  gridZ: 8
+  gridSpacingOffset: 40
+  gridOrigin: {x: -30, y: 0.5, z: -30}
+  positionRandomization: {x: 0.54, y: 0, z: 0.5}

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fdfe66b4ae2554fa497d5168053c93, type: 3}
+  m_Name: Test 4
+  m_EditorClassIdentifier: 
+  inputColors:
+  - color: {r: 0.06028557, g: 1, b: 0, a: 1}
+    maxSaturation: 1
+    minSaturation: 0
+    maxBrightnessValue: 1
+    minBrightnessValue: 0
+    variationsToGenerate: 16
+  - color: {r: 0, g: 1, b: 0.85604787, a: 1}
+    maxSaturation: 0.5
+    minSaturation: 0
+    maxBrightnessValue: 1
+    minBrightnessValue: 0.5
+    variationsToGenerate: 16
+  - color: {r: 1, g: 0.99092615, b: 0, a: 1}
+    maxSaturation: 0.5
+    minSaturation: 0
+    maxBrightnessValue: 1
+    minBrightnessValue: 0.5
+    variationsToGenerate: 16
+  addInvertedColor: 1
+  addGoldenRatioColor: 1
+  outputColors:
+  - {r: 0.006669143, g: 0.11062586, b: 0, a: 1}
+  - {r: 0, g: 0.467555, b: 0.40024945, a: 1}
+  - {r: 0.9251895, g: 1, b: 0.9892309, a: 1}
+  - {r: 0, g: 0.7273078, b: 0.6226103, a: 1}
+  - {r: 1, g: 0, b: 0.35208178, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.051950555, b: 0.04447216, a: 1}
+  - {r: 0, g: 0.31170332, b: 0.26683298, a: 1}
+  - {r: 0.89798564, g: 1, b: 0.9853148, a: 1}
+  - {r: 0, g: 0.31170332, b: 0.26683298, a: 1}
+  - {r: 0.003810939, g: 0.06321478, b: 0, a: 1}
+  - {r: 0.69913006, g: 0, b: 1, a: 1}
+  - {r: 0, g: 0.15585166, b: 0.13341649, a: 1}
+  - {r: 0.93199044, g: 1, b: 0.9902099, a: 1}
+  - {r: 0.7958959, g: 0.78867406, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  pickReducedSublistOfColors: 1
+  sublistLength: 16

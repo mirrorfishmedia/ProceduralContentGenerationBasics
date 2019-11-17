@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5455618390929886740}
   - component: {fileID: 9057188335104708054}
   - component: {fileID: 4068311273752294648}
-  - component: {fileID: 6738697785205217124}
+  - component: {fileID: 5825308819659701158}
   m_Layer: 0
-  m_Name: GeneratedColorCube
+  m_Name: FullyRandomColorCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6738697785205217124
+--- !u!114 &5825308819659701158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,8 +101,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1213017298524885382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7f31255b3375ac43a831d370f2cfeea, type: 3}
+  m_Script: {fileID: 11500000, guid: 90eee6cb5f4fd904bad9fe113b3bd40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorPalette: {fileID: 11400000, guid: 1fc7146e62914ae4c97b68f4b52b3fb6, type: 2}
-  thisRenderer: {fileID: 9057188335104708054}

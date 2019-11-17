@@ -6,16 +6,14 @@ using UnityEngine;
 public class MultiColorPalette : ScriptableObject
 {
 
-    public Color[] inputColors;
+    public ProceduralColor[] inputColors;
 
     public bool addInvertedColor;
     public bool addGoldenRatioColor;
-    public int variationsPerColor = 8;
     public List<Color> outputColors;
-    public bool pickSublistOfColors;
+    public bool pickReducedSublistOfColors;
     public int sublistLength = 16;
 
-    
     public void Generate()
     {
         outputColors.Clear();
@@ -23,7 +21,7 @@ public class MultiColorPalette : ScriptableObject
         {
             BuildListOfColorVariations(inputColors[i]);
         }
-        if (pickSublistOfColors)
+        if (pickReducedSublistOfColors)
         {
             GenerateRandomSublist(sublistLength);
 
@@ -39,54 +37,52 @@ public class MultiColorPalette : ScriptableObject
             tempColorList.Add(outputColors[Random.Range(0, outputColors.Count)]);
         }
 
-        GenerateValueVariations(tempColorList[0], variationsPerColor);
-
         outputColors = tempColorList;
     }
 
-    public void BuildListOfColorVariations(Color inputColor)
+    public void BuildListOfColorVariations(ProceduralColor inputColor)
     {
         List<Color> tempColorList = new List<Color>();
-        tempColorList = GenerateSaturationVariations(inputColor, variationsPerColor);
+        tempColorList = GenerateSaturationVariations(inputColor, inputColor.variationsToGenerate);
         outputColors.AddRange(tempColorList);
-        tempColorList = GenerateValueVariations(inputColor, variationsPerColor);
+        tempColorList = GenerateValueVariations(inputColor, inputColor.variationsToGenerate);
         outputColors.AddRange(tempColorList);
+
         if (addInvertedColor)
         {
             outputColors.Add(InvertColor(tempColorList[Random.Range(0, tempColorList.Count)]));
-
         }
 
         if (addGoldenRatioColor)
         {
-            outputColors.Add(GoldenRatioColor(inputColor));
-
+            outputColors.Add(GoldenRatioColor(inputColor.color));
         }
 
     }
 
-    public List<Color> GenerateSaturationVariations(Color inputColor, int numberOfVariations)
+    public List<Color> GenerateSaturationVariations(ProceduralColor inputColor, int numberOfVariations)
     {
         List<Color> generatedColorList = new List<Color>();
-        float saturationIncrement = 1.0f / numberOfVariations;
+        float saturationIncrement = Random.Range(inputColor.minSaturation, inputColor.maxSaturation) 
+            / inputColor.variationsToGenerate;
 
         for (int i = 0; i < numberOfVariations; i++)
         {
-            generatedColorList.Add(Desaturate(inputColor, saturationIncrement * i));
+            generatedColorList.Add(Desaturate(inputColor.color, saturationIncrement * i));
         }
 
         return generatedColorList;
     }
 
-    public List<Color> GenerateValueVariations(Color inputColor, int numberOfVariations)
+    public List<Color> GenerateValueVariations(ProceduralColor inputColor, int numberOfVariations)
     {
         List<Color> generatedColorList = new List<Color>();
 
-        float valueIncrement = 1.0f / numberOfVariations;
+        float valueIncrement = Random.Range(inputColor.minBrightnessValue, inputColor.maxBrightnessValue) / inputColor.variationsToGenerate;
 
         for (int i = 0; i < numberOfVariations; i++)
         {
-            generatedColorList.Add(SetLevel(inputColor, valueIncrement * i));
+            generatedColorList.Add(SetLevel(inputColor.color, valueIncrement * i));
         }
         return generatedColorList;
 

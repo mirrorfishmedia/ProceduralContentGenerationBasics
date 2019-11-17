@@ -217,7 +217,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.759434, g: 1, b: 0.8233411, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -272,7 +272,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 131180, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_Name
-      value: RobotoRed
+      value: RobortoRed
       objectReference: {fileID: 0}
     - target: {fileID: 423678, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -318,7 +318,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5237409509856810820, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8c4ea8fb6eab494d90c7a7e3e8327b2, type: 3}
 --- !u!1 &1155333711
 GameObject:
@@ -332,6 +333,7 @@ GameObject:
   - component: {fileID: 1155333714}
   - component: {fileID: 1155333713}
   - component: {fileID: 1155333712}
+  - component: {fileID: 1155333716}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -404,13 +406,27 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155333711}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.38026348, z: 0, w: 0.92487824}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalScale: {x: 100, y: 1, z: 157.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -44.7, z: 0}
+--- !u!114 &1155333716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155333711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f31255b3375ac43a831d370f2cfeea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPalette: {fileID: 0}
+  thisRenderer: {fileID: 0}
 --- !u!1 &1632825378
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToPickFrom:
-  - {fileID: 1213017298524885382, guid: 56d09830b03616441be0ecb22fdc5650, type: 3}
+  - {fileID: 1213017298524885382, guid: c9c804953c1219640b18047cebf6ea34, type: 3}
   gridX: 30
   gridZ: 30
   gridSpacingOffset: 1.2
