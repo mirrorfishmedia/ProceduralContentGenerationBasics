@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &612274162076892983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496693945571566762}
+  - component: {fileID: 8795281761749094872}
+  - component: {fileID: 1641294013083556671}
+  m_Layer: 0
+  m_Name: RandomRock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &496693945571566762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612274162076892983}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 184.86057, y: 16.865662, z: 115.02841}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8795281761749094872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612274162076892983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7cfa7d59599c2f419144a4174af0f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToPickFrom:
+  - {fileID: 7951574356445788542, guid: a69ebe1cf352bc248855b637b1fa74fc, type: 3}
+  - {fileID: 6217763160070750731, guid: e3015d4eb1aa78a478b311a675b2e1fe, type: 3}
+  - {fileID: 4192680939918595802, guid: 912ade560b21c5d4ebcf9163bd795cb0, type: 3}
+  - {fileID: 6646564085274601519, guid: b555cd73bb8f3ca4c99c372b21991e67, type: 3}
+  - {fileID: 2767173485024950124, guid: 86df5a9868890a348bff8c01d8c28f3e, type: 3}
+--- !u!114 &1641294013083556671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612274162076892983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cd1548e09fa6a40914d7aa67a5d912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRotationRange: {x: 0, y: 360, z: 0}

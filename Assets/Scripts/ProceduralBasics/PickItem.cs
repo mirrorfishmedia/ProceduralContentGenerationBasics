@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickItem : MonoBehaviour
 {
-
     public GameObject[] itemsToPickFrom;
 
     // Start is called before the first frame update
@@ -18,6 +17,7 @@ public class PickItem : MonoBehaviour
         int randomIndex = Random.Range(0, itemsToPickFrom.Length);
         GameObject clone = Instantiate(itemsToPickFrom[randomIndex], transform.position, transform.rotation);
     }
+
 
 
 }
